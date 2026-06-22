@@ -8,9 +8,19 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <span class="nav-name">Laura Ibragimova</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <main id="main-content" class="page">
     <header class="site-header">
-      <section class="hero" aria-labelledby="hero-heading">
+      <section class="hero" id="about" aria-labelledby="hero-heading">
         <div class="hero-content">
           <p class="tag">AIM 5012 · Week 1</p>
           <h1 id="hero-heading">Hi! I'm Laura</h1>
@@ -20,7 +30,26 @@
       </section>
     </header>
 
-    <section class="projects" aria-labelledby="projects-heading">
+    <section class="workflow-strip" aria-label="Course workflow">
+      <div class="workflow-step">
+        <strong>Inspect</strong>
+        <span>Read the project first.</span>
+      </div>
+      <div class="workflow-step">
+        <strong>Plan</strong>
+        <span>Choose one safe change.</span>
+      </div>
+      <div class="workflow-step">
+        <strong>Test</strong>
+        <span>Verify in the browser.</span>
+      </div>
+      <div class="workflow-step">
+        <strong>Log</strong>
+        <span>Record AI use honestly.</span>
+      </div>
+    </section>
+
+    <section class="projects" id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">My Current Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
@@ -38,18 +67,17 @@
       <h2 id="idea-heading">My Project Idea</h2>
       <div class="idea-box">
         <h3>AI Policy Tracking Tool</h3>
-        <p>The Policy Nest is a lightweight AI policy tracker built for healthcare stakeholders. It monitors and summarizes AI-related policy changes across federal, state, and international jurisdictions — delivering concise impact analyses tailored for healthcare operators, payers, VBC teams, and ACO leaders who need to stay ahead of regulation without adding headcount.
-
-It provides a full project implementation plan, pre-built alert frameworks organized by healthcare-relevant AI policy domains, policy impact summary templates, and a financial modeling plan with ROI analysis for organizations evaluating AI policy compliance investment.</p>
+        <p>The Policy Nest is a lightweight AI policy tracker built for healthcare stakeholders. It monitors and summarizes AI-related policy changes across federal, state, and international jurisdictions — delivering concise impact analyses tailored for healthcare operators, payers, VBC teams, and ACO leaders who need to stay ahead of regulation without adding headcount.</p>
+        <p>It provides a full project implementation plan, pre-built alert frameworks organized by healthcare-relevant AI policy domains, policy impact summary templates, and a financial modeling plan with ROI analysis for organizations evaluating AI policy compliance investment.</p>
       </div>
     </section>
 
-    <section class="contact" aria-labelledby="contact-heading">
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Get in Touch</h2>
       <div class="contact-buttons">
         <a class="button" href="https://www.linkedin.com/in/laura-ibragimova/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">LinkedIn</a>
         <a class="button" href="mailto:Libragimova12@gmail.com" aria-label="Send email">Email</a>
-        <a class="button" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in new tab)">Visit GitHub</a>
+        <a class="button" href="https://github.com/LauraIbragimova" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">Visit GitHub</a>
       </div>
     </section>
   </main>
