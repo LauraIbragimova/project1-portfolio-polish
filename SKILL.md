@@ -17,7 +17,7 @@ Improve the portfolio webpage by making small, explainable edits to `index.html`
 ## Steps
 1. Inspect `index.html` and `style.css` before making any changes.
 2. Explain a short plan: which files you will edit, what you will change, and why each change helps.
-3. Wait for student approval before editing.
+3. Wait for my approval before editing.
 4. Make only the approved changes. Edit one file at a time.
 5. Check for and fix the following if present:
    - Heading hierarchy (h1 → h2 → h3 used in correct order)
@@ -27,7 +27,7 @@ Improve the portfolio webpage by making small, explainable edits to `index.html`
    - Button or link text that does not describe where it goes
    - Any text that overflows or wraps awkwardly on narrow screens
 6. After editing, summarize exactly what changed in plain language.
-7. For each change, state one browser check the student can do to verify it.
+7. For each change, state one browser check I can do to verify it.
 
 ## Output
 - Updated `index.html` and/or `style.css`
@@ -36,7 +36,7 @@ Improve the portfolio webpage by making small, explainable edits to `index.html`
 
 ## Boundaries
 - Only edit `index.html` and `style.css`
-- Do not change the student's personal content — name, bio, project titles, or descriptions
+- Do not change my personal content — name, bio, project titles, or descriptions
 - Do not use React, Tailwind, Bootstrap, or JavaScript
 - Do not rewrite the entire file — make targeted edits only
 - Do not install dependencies
