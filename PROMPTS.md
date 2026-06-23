@@ -2,273 +2,147 @@
 
 ## AI Use Log
 
-| Date | What I asked | What AI suggested | What I changed | What I learned |
-|---|---|---|---|---|
-| Week 1 | Explain my HTML line by line | AI explained h1, p, a, section | I changed my heading and intro | h1 is the main heading |
-| June 22, 2026 | Add a nav bar, section IDs, workflow strip, and fix GitHub link | AI added a `<nav>` element, `id` attributes on each section, a four-step workflow strip, and corrected the GitHub href | Accepted all changes to index.html | Nav links need matching section IDs to work as jump links |
-| June 22, 2026 | Style the nav bar with a colored background and make the workflow strip horizontal | AI updated style.css to add a full-width sticky purple nav bar and a horizontal four-panel workflow strip with responsive mobile fallback | Accepted all CSS changes to style.css | CSS `display: flex` controls horizontal vs vertical layout; `position: sticky` keeps the nav visible while scrolling |
-
-## Reflection notes
-
-- One part of the code I understand: The `<nav>` element and anchor links (`href="#about"`) — clicking a nav link jumps to the matching `id` on the page
-- One part that still feels unclear: How CSS media queries decide when to switch from desktop to mobile layout
-- One thing I changed myself: Reviewed and approved each change before it was committed to GitHub
+| Date | Tool | What I asked | What AI suggested | What I accepted | How I tested |
+|---|---|---|---|---|---|
+| Week 1 / VS Code | Claude Code | Explain my HTML line by line | AI explained h1, p, a, section | Reviewed explanation, no file changes | Opened index.html in browser |
+| Week 1 / VS Code | Claude Code | Update heading, intro, add headshot, projects, contact, footer, and My Project Idea section | Full plan for index.html and style.css changes | Approved plan first, then accepted all changes after review | Opened local page with `open index.html`, refreshed browser, confirmed all sections visible |
+| Week 1 / VS Code | Claude Code | Style hero as flex layout with headshot on right, add responsive grid, idea box styling | CSS updates for `.hero`, `.headshot`, `.projects-grid`, `.idea-box`, buttons, and cards | Accepted full style.css update | Checked headshot position, card layout, and button spacing in browser |
+| June 22, 2026 / Perplexity | Perplexity Computer | Add nav bar with About/Projects/Contact links, add section IDs, add workflow strip, fix GitHub link | Added `<nav>` element, `id` attributes on sections, four-step workflow strip, corrected GitHub href | Reviewed plan before approving, accepted all index.html changes | Verified on GitHub repo that commit was pushed correctly |
+| June 22, 2026 / Perplexity | Perplexity Computer | Style nav bar as colored horizontal bar, make workflow strip horizontal | Updated style.css: full-width sticky purple nav bar, horizontal four-panel workflow strip with mobile responsive fallback | Accepted all CSS changes to style.css | Confirmed commit pushed to GitHub |
 
 ---
 
-## Prompt 1 — Default Week 1 Prompt
+## Full Project Edit Summary
 
+### VS Code Session (Week 1)
+
+**What was changed:**
+- Updated `index.html`:
+  - Changed the main heading to "Hi! I'm Laura"
+  - Replaced the intro paragraph with full MBA / Quantitative Finance / AI Strategy / public health policy description
+  - Added headshot image reference `IMG_4038.jpg` on the right side of the hero section
+  - Added "My Current Projects" section with two cards: Quantitative Finance and AI Strategy and Governance
+  - Added contact section with LinkedIn, Email, and GitHub buttons
+  - Added centered footer: © 2026 Laura Ibragimova · Built with AI · AIM 5012
+  - Added "My Project Idea" section with heading outside the box and AI Policy Tracking Tool description inside
+
+- Updated `style.css`:
+  - Turned `.hero` into a flex layout so the headshot sits on the right
+  - Added `.headshot` cropping with `object-position: center top`
+  - Added responsive styling so `.projects-grid` stacks to one column on narrow screens
+  - Added styles for the new `.idea-box` section
+  - Updated button and card spacing for consistent layout
+
+**What I asked to approve before editing:**
+- The exact plan to update index.html and style.css
+- That the hero section should include my new copy and headshot
+- That the "My Project Idea" title should sit outside the colored box
+- That the idea box should contain only the AI Policy Tracking Tool heading and one descriptive paragraph
+- AI waited for my approval before making any edits
+
+**What AI helped with:**
+- Structuring page changes into safe, beginner-friendly HTML edits
+- Translating the requested layout into actual index.html markup
+- Writing CSS for the hero layout, project cards, footer, and responsive behavior
+- Advising the GitHub Pages deployment workflow
+
+**What I accepted:**
+- Full set of page updates described above
+- GitHub Pages deployment approach using option B
+- Final descriptive paragraph for the AI Policy Tracking Tool
+- New footer and responsive layout
+
+**How it was verified:**
+- Opened local page in browser using `open index.html`
+- Refreshed browser after each edit
+- Checked contact buttons, header text, and new sections were present
+- Verified GitHub Pages URL was not yet live, confirming repo was public but needed Pages activation
+
+---
+
+### Perplexity Computer Session (June 22, 2026)
+
+**What was changed:**
+- Updated `index.html`:
+  - Added sticky `<nav>` bar at top with name on left and About / Projects / Contact links on right
+  - Added `id="about"` to hero section, `id="projects"` to projects section, `id="contact"` to contact section
+  - Added four-step workflow strip (Inspect → Plan → Test → Log) between hero and projects sections
+  - Fixed GitHub button link from generic `https://github.com/` to `https://github.com/LauraIbragimova`
+
+- Updated `style.css`:
+  - Styled `.site-nav` as a full-width sticky purple bar (`#6c4ef6`) with white text
+  - Styled `.workflow-strip` as a horizontal four-panel row with purple labels and muted descriptions
+  - Added responsive mobile fallback: nav stacks vertically, workflow strip goes single column on screens under 768px
+
+**What I asked to approve before editing:**
+- AI presented the full plan with all five changes listed before touching any file
+- I reviewed and approved the plan before any edits were made
+
+**What AI helped with:**
+- Writing the `<nav>` HTML element and anchor link structure
+- Applying sticky positioning and color styling to the nav bar in CSS
+- Designing the horizontal workflow strip layout using flexbox
+
+**What I accepted:**
+- All index.html and style.css changes as described above
+
+**How it was verified:**
+- Confirmed commits were pushed successfully to GitHub repo
+- Repo visible at github.com/LauraIbragimova/project1-portfolio-polish
+
+---
+
+## Reflection Notes
+
+- One part of the code I understand: The `<nav>` element and anchor links (`href="#about"`) — clicking a nav link jumps to the matching `id` on the page
+- One part that still feels unclear: How CSS media queries decide when to switch from desktop to mobile layout
+- One thing I changed myself: Reviewed and approved each plan before it was committed — nothing was edited without my go-ahead
+
+---
+
+## Reusable Prompts
+
+### Prompt 1 — Default Beginner Prompt
 ```text
 I am a beginner. Explain this code first. Then suggest one small change. Do not rewrite everything.
 ```
 
----
-
-## Prompt 2 — Customize My Page
-
+### Prompt 2 — Customize My Page
 ```text
-I am making a simple About Me webpage.
-
-Here is my HTML:
-
-[paste your HTML here]
-
-Help me customize it for myself.
-
+I am making a simple About Me webpage. Help me customize it for myself.
 Please suggest:
 1. One change to the heading.
 2. One change to the introduction paragraph.
 3. One new section I could add.
-
 Keep the suggestions simple and explain what each change does.
 ```
 
----
-
-## Prompt 3 — Add a New Section
-
+### Prompt 3 — Ask for a Plan Before File Changes
 ```text
-I want to add a new section to my About Me webpage.
-
-The section should be called "My project idea".
-
-Please show me only the HTML for this new section.
-
-Constraints:
-- Keep it beginner-friendly.
-- Use the same style pattern as my existing card section.
-- Explain where I should paste it.
-```
-
----
-
-## Prompt 4 — Improve My Link Button
-
-```text
-I have a link button in my webpage.
-
-Here is the code:
-
-[paste the link code here]
-
-Please explain:
-1. What the href does.
-2. What target="_blank" does.
-3. How I can change the button text.
-4. How I can safely use a placeholder link if I do not have my real link yet.
-```
-
----
-
-## Prompt 5 — Help Me Understand CSS
-
-```text
-I am a beginner learning CSS.
-
-Here is my style.css:
-
-[paste CSS here]
-
-Please explain:
-1. What each selector controls.
-2. Which line controls the background color.
-3. Which line controls the heading color.
-4. One small style change I can safely try.
-```
-
----
-
-# Debugging Prompts
-
-Use these when something breaks.
-
----
-
-## Prompt 6 — General Debugging Prompt
-
-```text
-I am a beginner and my webpage is not working as expected.
-
-Here is what I expected:
-[describe expected result]
-
-Here is what actually happened:
-[describe actual result or paste error message]
-
-Here is the code I changed last:
-[paste code]
-
-Please explain the likely cause first.
-Then give me 3 small things to check.
-Do not rewrite the whole project.
-```
-
----
-
-## Prompt 7 — CSS Is Not Showing
-
-```text
-My HTML page opens, but the CSS style is not showing.
-
-Here is the line in my HTML that connects the CSS file:
-
-[paste link tag]
-
-Here are my file names:
-[paste file names]
-
-Please help me debug this.
-
-Explain:
-1. Whether the CSS file name matches.
-2. Whether the href path looks correct.
-3. What I should check in the browser.
-4. The smallest fix to try first.
-```
-
----
-
-## Prompt 8 — My Link Does Not Work
-
-```text
-My link does not work the way I expected.
-
-Here is my link code:
-
-[paste link code]
-
-Please explain:
-1. What URL this link goes to.
-2. Whether the href is valid.
-3. Whether target="_blank" is used correctly.
-4. How to test the link safely.
-```
-
----
-
-## Prompt 9 — I Changed Something But Nothing Happened
-
-```text
-I changed my HTML or CSS file, but the browser did not change.
-
-Please help me debug.
-
-Here is what I changed:
-[paste change]
-
-Here is what I expected:
-[describe expected result]
-
-Here is what happened:
-[describe actual result]
-
-Give me a beginner-friendly checklist. Include saving the file, refreshing the browser, checking the file name, and checking whether I edited the correct file.
-```
-
----
-
-# Safe CLI Agent Prompts
-
-Use these only if you are using Codex, Claude Code, Antigravity CLI, or another terminal/project-level coding agent.
-
----
-
-## Prompt 10 — Safe Start for CLI Agent
-
-```text
-We are working in one beginner class project folder.
-
-Rules:
-- Stay inside this folder.
-- Do not access private files outside this folder.
-- Do not install packages unless I approve.
-- Do not use frameworks.
-- Do not use API keys or secrets.
-- Do not edit files until you explain your plan.
-
-First, inspect the files and explain what you see.
-```
-
----
-
-## Prompt 11 — Ask for a Plan Before File Changes
-
-```text
-Before editing any files, propose a plan.
-
-The plan should include:
+Before editing any files, propose a plan. Include:
 1. Which files you want to edit.
 2. What changes you want to make.
 3. Why each change helps the beginner learning goal.
 4. How we will test the result.
-
 Do not edit yet.
 ```
 
----
-
-## Prompt 12 — Small Approved Edit
-
+### Prompt 4 — Small Approved Edit
 ```text
-I approve only this small change:
-
-[describe the approved change]
-
+I approve only this small change: [describe the approved change]
 Please edit only the necessary file or files.
-
 After editing:
 1. Summarize exactly what changed.
 2. Tell me how to test it.
 3. Do not make extra improvements unless I ask.
 ```
 
----
-
-## Prompt 13 — Review the Diff
-
+### Prompt 5 — General Debugging
 ```text
-Please summarize the file changes like a code review.
-
-Use this format:
-1. File changed
-2. Lines or sections changed
-3. Why the change was made
-4. What I should test
-5. Anything risky or unclear
-```
-
----
-
-# Week 1 Reflection Prompts
-
-```text
-Write a short reflection of about 300 words.
-
-Please answer:
-1. What did you build?
-2. What did AI help you with?
-3. What part of the code can you explain now?
-4. What did you test?
-5. What is still unclear or confusing?
-6. What do you want to improve next week?
+I am a beginner and my webpage is not working as expected.
+Here is what I expected: [describe expected result]
+Here is what actually happened: [describe actual result]
+Here is the code I changed last: [paste code]
+Please explain the likely cause first. Then give me 3 small things to check.
+Do not rewrite the whole project.
 ```
