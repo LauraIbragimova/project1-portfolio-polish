@@ -1,43 +1,44 @@
 ---
-name: project1-portfolio-polish
-description: Review a beginner portfolio webpage for AIM 5012. Use when the user asks for portfolio feedback, a class checkpoint review, or a readiness check.
+name: portfolio-polish
+description: Improve a beginner portfolio webpage for AIM 5012 by making targeted, beginner-friendly edits to HTML and CSS. Use when the student wants to improve structure, content clarity, visual consistency, or accessibility — not just get feedback.
 ---
 
-# Portfolio Review
+# Portfolio Polish
 
 ## Goal
-Review the portfolio page as a teaching assistant focused on working behavior, 
-student explainability, and simple HTML/CSS structure.
+Improve the portfolio webpage by making small, explainable edits to `index.html` and `style.css`. Every change must be understandable to a beginner and easy to verify in the browser.
 
 ## Inputs
-- index.html
-- style.css
-- PROMPTS.md
-- README.md
+- `index.html`
+- `style.css`
+- `PROMPTS.md` (read only — do not edit)
+- `README.md` (read only — do not edit)
 
 ## Steps
-1. Inspect the project before editing anything.
-2. Check that the page has About, Projects, and Contact sections.
-3. Check that the HTML is beginner-friendly and readable.
-4. Check that the CSS is simple and not overly complex.
-5. Check that PROMPTS.md records meaningful AI use with dates and explanations.
-6. Check that README.md explains how to run and verify the project.
-7. Identify 3 strengths, 3 specific improvements, and 1 smallest next step.
-8. Do not rewrite the whole project — suggest one small change at a time.
+1. Inspect `index.html` and `style.css` before making any changes.
+2. Explain a short plan: which files you will edit, what you will change, and why each change helps.
+3. Wait for student approval before editing.
+4. Make only the approved changes. Edit one file at a time.
+5. Check for and fix the following if present:
+   - Heading hierarchy (h1 → h2 → h3 used in correct order)
+   - Missing or weak `aria-label` attributes on buttons and links
+   - Section descriptions that are too vague — make them more specific
+   - Inconsistent spacing between sections
+   - Button or link text that does not describe where it goes
+   - Any text that overflows or wraps awkwardly on narrow screens
+6. After editing, summarize exactly what changed in plain language.
+7. For each change, state one browser check the student can do to verify it.
 
 ## Output
-- 3 strengths
-- 3 specific improvements
-- 1 smallest next step the student should take
+- Updated `index.html` and/or `style.css`
+- A plain-language summary listing every change made
+- One verification step per change (e.g. "Open the page and confirm the Projects heading appears below About")
 
 ## Boundaries
-- Do not rewrite the entire project.
-- Do not install dependencies.
-- Do not commit changes.
-- Do not edit files unless the student explicitly approves.
-- Do not paste or store API keys, passwords, or private student data.
-
-
-<!-- Tip: Use /create-skill in chat to generate content with agent assistance -->
-
-Define the functionality provided by this skill, including detailed instructions and examples
+- Only edit `index.html` and `style.css`
+- Do not change the student's personal content — name, bio, project titles, or descriptions
+- Do not use React, Tailwind, Bootstrap, or JavaScript
+- Do not rewrite the entire file — make targeted edits only
+- Do not install dependencies
+- Do not commit changes unless the student explicitly asks
+- Do not read, print, or store API keys, passwords, or personal data
