@@ -5,14 +5,16 @@
 | Date | What I asked | What AI suggested | What I changed | What I learned |
 |---|---|---|---|---|
 | Week 1 | Explain my HTML line by line | AI explained h1, p, a, section | I changed my heading and intro | h1 is the main heading |
+| June 22, 2026 | Add a nav bar, section IDs, workflow strip, and fix GitHub link | AI added a `<nav>` element, `id` attributes on each section, a four-step workflow strip, and corrected the GitHub href | Accepted all changes to index.html | Nav links need matching section IDs to work as jump links |
+| June 22, 2026 | Style the nav bar with a colored background and make the workflow strip horizontal | AI updated style.css to add a full-width sticky purple nav bar and a horizontal four-panel workflow strip with responsive mobile fallback | Accepted all CSS changes to style.css | CSS `display: flex` controls horizontal vs vertical layout; `position: sticky` keeps the nav visible while scrolling |
 
 ## Reflection notes
 
-- One part of the code I understand:
-- One part that still feels unclear:
-- One thing I changed myself:
+- One part of the code I understand: The `<nav>` element and anchor links (`href="#about"`) — clicking a nav link jumps to the matching `id` on the page
+- One part that still feels unclear: How CSS media queries decide when to switch from desktop to mobile layout
+- One thing I changed myself: Reviewed and approved each change before it was committed to GitHub
 
-
+---
 
 ## Prompt 1 — Default Week 1 Prompt
 
@@ -257,58 +259,7 @@ Use this format:
 
 ---
 
-# PROMPTS.md Template
-
-Students can copy this into their project.
-
-```markdown
-# PROMPTS.md
-
-## Project
-Week 1 First Build — About Me Page
-
-## AI Use Log
-
-### Entry 1
-**What I asked:**  
-[Write your prompt or summarize it]
-
-**What AI suggested:**  
-[Summarize the useful suggestion]
-
-**What I changed:**  
-[Explain what you actually changed in your file]
-
-**How I tested it:**  
-[Explain how you checked it in the browser]
-
-**What I learned:**  
-[Write one thing you understand better now]
-
----
-
-### Entry 2
-**What I asked:**  
-[Write your prompt or summarize it]
-
-**What AI suggested:**  
-[Summarize the useful suggestion]
-
-**What I changed:**  
-[Explain what you actually changed in your file]
-
-**How I tested it:**  
-[Explain how you checked it in the browser]
-
-**What I learned:**  
-[Write one thing you understand better now]
-```
-
----
-
 # Week 1 Reflection Prompts
-
-Students can use these for the short reflection.
 
 ```text
 Write a short reflection of about 300 words.
