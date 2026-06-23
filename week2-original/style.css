@@ -5,6 +5,41 @@ body {
   color: #15231d;
 }
 
+/* ── Nav bar ── */
+.site-nav {
+  background: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 52px;
+}
+
+.nav-name {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ── Page layout ── */
 .page {
   max-width: 900px;
   margin: 0 auto;
@@ -48,4 +83,56 @@ h1 {
   padding: 28px;
   border-radius: 8px;
   border: 1px solid #dde3ea;
+}
+
+/* ── Project cards grid ── */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.project-card {
+  background: #f6f7f2;
+  border: 1px solid #dde3ea;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.project-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #2563eb;
+}
+
+.project-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ── Footer ── */
+.footer {
+  margin-top: 48px;
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #6a7280;
+  border-top: 1px solid #dde3ea;
+}
+
+/* ── Responsive: stack on narrow screens ── */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 12px 16px;
+    gap: 8px;
+  }
 }
