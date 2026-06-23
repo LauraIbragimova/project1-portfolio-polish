@@ -5,6 +5,8 @@
   --muted: #6a7280;
   --accent: #6c4ef6;
   --accent-strong: #5a3fd4;
+  --nav-bg: #6c4ef6;
+  --nav-text: #ffffff;
 }
 
 /* Base */
@@ -38,6 +40,54 @@ body {
   z-index: 1000;
 }
 
+/* ── Navigation Bar ── */
+.site-nav {
+  background: var(--nav-bg);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  height: 56px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(108,78,246,0.25);
+}
+
+.nav-name {
+  color: var(--nav-text);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.15s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── Page Layout ── */
 .page {
   max-width: var(--page-max);
   margin: 0 auto;
@@ -91,6 +141,48 @@ h1 {
   line-height: 1.6;
   color: #3a4450;
   margin: 0;
+}
+
+/* ── Workflow Strip ── */
+.workflow-strip {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  margin-top: 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.workflow-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 12px;
+  background: white;
+  border-right: 1px solid #ede9f8;
+  text-align: center;
+}
+
+.workflow-step:last-child {
+  border-right: none;
+}
+
+.workflow-step strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.workflow-step span {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 /* Buttons */
@@ -226,6 +318,20 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  .site-nav {
+    padding: 0 16px;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
   .hero {
     flex-direction: column;
     gap: 20px;
@@ -237,6 +343,20 @@ h1 {
     max-width: 280px;
     height: auto;
     margin: 0 auto;
+  }
+
+  .workflow-strip {
+    flex-direction: column;
+    border-radius: 14px;
+  }
+
+  .workflow-step {
+    border-right: none;
+    border-bottom: 1px solid #ede9f8;
+  }
+
+  .workflow-step:last-child {
+    border-bottom: none;
   }
 
   .projects-grid {
