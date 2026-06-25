@@ -136,3 +136,11 @@ h1 {
     gap: 8px;
   }
 }
+
+/* ── Contact buttons ── */
+.contact-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
