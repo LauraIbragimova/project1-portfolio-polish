@@ -146,3 +146,31 @@ Here is the code I changed last: [paste code]
 Please explain the likely cause first. Then give me 3 small things to check.
 Do not rewrite the whole project.
 ```
+
+---
+
+## Week 2 AI Use Log
+
+**What AI helped with:**
+- Inspected the professor's starter `index.html` and `style.css` before making any changes
+- Proposed a beginner-friendly plan for each edit before touching files
+- Added nav bar, section IDs, project cards, contact buttons, headshot image, and footer to `index.html`
+- Wrote CSS for the horizontal nav, two-column project grid, headshot layout, and responsive stacking
+- Set up the `week2` branch and copied files for GitHub Pages deployment
+
+**What I accepted:**
+- All five planned changes to `index.html` and `style.css` after reviewing the plan first
+- Contact section replaced with three linked buttons (Email, LinkedIn, GitHub)
+- Headshot added to hero with descriptive alt text
+- Responsive CSS so the layout stacks cleanly on narrow screens
+
+**What I reviewed:**
+- Each plan was presented in the chat before any file was edited
+- Confirmed every commit in the GitHub repo after it was pushed
+- Verified file structure in `week2-original/` and `week2` branch
+
+**How I verified:**
+- Downloaded files locally and opened `index.html` in the browser
+- Clicked each nav link to confirm it jumps to the correct section
+- Clicked each contact button to confirm it links to the right place
+- Confirmed GitHub Pages branch (`week2`) has `index.html`, `style.css`, and `IMG_4038.jpg`
