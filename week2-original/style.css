@@ -46,10 +46,27 @@ body {
   padding: 48px 24px;
 }
 
+/* ── Hero with headshot ── */
 .hero {
   background: #e8f1ff;
   padding: 36px;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .tag {
@@ -122,8 +139,27 @@ h1 {
   border-top: 1px solid #dde3ea;
 }
 
+/* ── Contact buttons ── */
+.contact-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
 /* ── Responsive: stack on narrow screens ── */
 @media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headshot {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -135,12 +171,4 @@ h1 {
     padding: 12px 16px;
     gap: 8px;
   }
-}
-
-/* ── Contact buttons ── */
-.contact-buttons {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 8px;
 }
